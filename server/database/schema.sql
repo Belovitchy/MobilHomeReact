@@ -67,6 +67,14 @@ create table invoice (
   foreign key(owner_id) references owner(id)
 );
 
+create table link (
+  id int unsigned primary key auto_increment not null,
+  name varchar(255) not null,
+  url varchar(255) not null,
+  owner_id int unsigned not null,
+  foreign key(owner_id) references owner(id)
+);
+
 insert into manager(id, name, firstname, email, telephone)
 values
   (1, "Dupont", "Jean", "dupont@example.com", "06 12 34 56 78"),
