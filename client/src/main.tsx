@@ -8,11 +8,16 @@ import { RouterProvider, createBrowserRouter } from "react-router";
 // Import the main app component
 import App from "./App";
 
+import Admin from "./pages/Admin.tsx";
 import Dashboard from "./pages/Dashboard.tsx";
+import Manager from "./pages/Manager.tsx";
+import Mobilhome from "./pages/Mobilhome.tsx";
+import MobilhomeDetail from "./pages/MobilhomeDetail.tsx";
 import NotFound from "./pages/NotFound.tsx";
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
 import Accueil from "./pages/accueil.tsx";
+import Invoice from "./pages/invoice.tsx";
 // import About from "./pages/About";
 // import Contact from "./pages/Contact";
 
@@ -33,6 +38,26 @@ const router = createBrowserRouter([
       {
         path: "/dashboard",
         element: <Dashboard />,
+      },
+      {
+        path: "/dashboard/mobilhomes",
+        element: <Mobilhome />,
+      },
+      {
+        path: "/dashboard/mobilhomes/:id",
+        element: <MobilhomeDetail />,
+      },
+      {
+        path: "/dashboard/invoices",
+        element: <Invoice />,
+      },
+      {
+        path: "/dashboard/managers",
+        element: <Manager />,
+      },
+      {
+        path: "/dashboard/admin",
+        element: <Admin />,
       },
     ], // Renders the App component for the home page
   },
